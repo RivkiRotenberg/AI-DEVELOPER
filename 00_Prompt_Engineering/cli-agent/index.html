@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>CLI Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🖥️ CLI Agent</h1>
+    <p class="subtitle">כתוב בעברית מה אתה רוצה לעשות</p>
+
+    <!-- בחירת מערכת הפעלה -->
+    <div class="os-selector">
+      <label>
+        <input type="radio" name="os" value="Windows" checked> Windows
+      </label>
+      <label>
+        <input type="radio" name="os" value="Linux"> Linux
+      </label>
+      <label>
+        <input type="radio" name="os" value="Mac"> Mac
+      </label>
+    </div>
+
+    <!-- שדה קלט -->
+    <div class="input-row">
+      <input 
+        type="text" 
+        id="userInput" 
+        placeholder='לדוגמה: "מחק את כל קבצי ה-tmp"'
+      />
+      <button id="convertBtn">המר לפקודה ⚡</button>
+    </div>
+
+    <!-- אזור תוצאה -->
+    <div id="resultBox" class="result-box hidden">
+      <span class="label">פקודת CLI:</span>
+      <code id="commandOutput"></code>
+      <button id="copyBtn">📋 העתק</button>
+    </div>
+
+    <!-- אזהרה על פקודות מסוכנות -->
+    <div id="warningBox" class="warning hidden"></div>
+
+    <!-- היסטוריה -->
+    <div id="history" class="history"></div>
+  </div>
+
+  <script src="agent.js"></script>
+</body>
+</html>
