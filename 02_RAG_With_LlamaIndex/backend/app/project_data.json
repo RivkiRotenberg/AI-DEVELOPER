@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-20T22:45:02.442496Z",
+  "decisions": [
+    {
+      "id": "dec-001",
+      "title": "Database Implementation",
+      "summary": "Replace the in-memory dictionary with a persistent database like PostgreSQL or SQLite for production-ready scalability.",
+      "tags": [
+        "db"
+      ],
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          10,
+          15
+        ],
+        "section_anchor": "## Technical Constraints"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "dec-002",
+      "title": "Authentication and Authorization",
+      "summary": "Implement authentication and authorization layers to address security risks before deployment.",
+      "tags": [
+        "auth",
+        "security"
+      ],
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          16,
+          20
+        ],
+        "section_anchor": "## Technical Constraints"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "dec-003",
+      "title": "Scalability Architecture",
+      "summary": "Adopt a load balancing and multi-process architecture to handle high traffic loads.",
+      "tags": [
+        "backend",
+        "scalability"
+      ],
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          21,
+          25
+        ],
+        "section_anchor": "## Technical Constraints"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "dec-001",
+      "title": "Superseding Prior Knowledge",
+      "summary": "The rules outlined in this document take precedence over any general knowledge or prior training. When in conflict, these instructions should be followed.",
+      "tags": [
+        "general",
+        "instructions"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          1,
+          3
+        ],
+        "section_anchor": "# Agent Rules and Coding Standards"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-002",
+      "title": "Clean and Documented Code",
+      "summary": "All generated code must be clean, modular, and well-documented, ensuring maintainability and readability.",
+      "tags": [
+        "code_generation"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          3,
+          4
+        ],
+        "section_anchor": "# Agent Rules and Coding Standards"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-003",
+      "title": "Task Decomposition and Logging",
+      "summary": "Complex requests should be broken down into smaller steps, with each step logged in `agent-log.md` for context and change history.",
+      "tags": [
+        "task_decomposition",
+        "logging"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          4,
+          5
+        ],
+        "section_anchor": "# Agent Rules and Coding Standards"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-004",
+      "title": "Idempotent Operations",
+      "summary": "Operations should be designed to be idempotent, assuming that scripts or commands might be run multiple times.",
+      "tags": [
+        "idempotency"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          5,
+          6
+        ],
+        "section_anchor": "# Agent Rules and Coding Standards"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-005",
+      "title": "Separation of Concerns",
+      "summary": "Business logic, API routing, and data schemas must be kept separate to maintain a clear and modular architecture.",
+      "tags": [
+        "architecture",
+        "separation_of_concerns"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          18,
+          19
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-006",
+      "title": "Database Interaction",
+      "summary": "All database operations should be handled by the `services` layer, with routers refraining from direct database access.",
+      "tags": [
+        "database",
+        "services"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          19,
+          20
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-007",
+      "title": "Configuration Management",
+      "summary": "Avoid hardcoding credentials or configuration values. Use environment variables or a dedicated configuration file for better security and flexibility.",
+      "tags": [
+        "configuration",
+        "security"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          20,
+          21
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-008",
+      "title": "RESTful API Design",
+      "summary": "Follow RESTful principles for API endpoints, ensuring clear and consistent naming for routes.",
+      "tags": [
+        "api",
+        "restful"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          21,
+          22
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-009",
+      "title": "Conventional Commit Messages",
+      "summary": "Commits should follow the Conventional Commits specification for clear and descriptive commit messages.",
+      "tags": [
+        "commit_messages",
+        "conventional_commits"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          25,
+          26
+        ],
+        "section_anchor": "## 4. Commit and Logging Rules"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-010",
+      "title": "Agent Logging",
+      "summary": "Before starting a task, log the plan in `agent-log.md`. After completion, update the log with the outcome and next steps for context and change tracking.",
+      "tags": [
+        "logging",
+        "agent_logging"
+      ],
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          26,
+          27
+        ],
+        "section_anchor": "## 4. Commit and Logging Rules"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-001",
+      "title": "Modern Decoupled Architecture",
+      "summary": "The system is designed with a modern, decoupled architecture, utilizing Python-based FastAPI for the backend and React for the frontend.",
+      "tags": [
+        "backend",
+        "frontend"
+      ],
+      "source": {
+        "file_path": "architecture-plan.md",
+        "line_range": [
+          1,
+          10
+        ],
+        "section_anchor": "High-Level Architecture"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "dec-002",
+      "title": "Database Selection",
+      "summary": "The decision to use a relational database, such as PostgreSQL or SQLite for development, to store persistent data.",
+      "tags": [
+        "db"
+      ],
+      "source": {
+        "file_path": "architecture-plan.md",
+        "line_range": [
+          11,
+          15
+        ],
+        "section_anchor": "Database Schema"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule-001",
+      "rule": "Design UI components to support Right-to-Left (RTL) layouts for languages like Hebrew and Arabic.",
+      "scope": "ui",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          30,
+          35
+        ],
+        "section_anchor": "## RTL Design Guidelines"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "rule-002",
+      "rule": "Ensure proper text alignment for RTL languages, including right-aligning titles, labels, and text elements.",
+      "scope": "ui",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          36,
+          40
+        ],
+        "section_anchor": "## RTL Design Guidelines"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "rule-003",
+      "rule": "Flip icons, buttons with directional arrows, and asymmetrical UI elements horizontally in RTL mode.",
+      "scope": "ui",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          41,
+          45
+        ],
+        "section_anchor": "## RTL Design Guidelines"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "rule-004",
+      "rule": "Use Pydantic models in `schemas/` to define strict data contracts for API requests and responses.",
+      "scope": "api",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          50,
+          55
+        ],
+        "section_anchor": "## API Challenges & Solutions"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "rule-005",
+      "rule": "Introduce a mock service layer (`services/`) to decouple business logic from API endpoints for modularity and testability.",
+      "scope": "backend",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          56,
+          60
+        ],
+        "section_anchor": "## API Challenges & Solutions"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "rule-001",
+      "rule": "Strictly adhere to PEP 8 style guidelines for Python code.",
+      "scope": "Python coding standards",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          9,
+          10
+        ],
+        "section_anchor": "## 2. Python Coding Standards (PEP 8 & Beyond)"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-002",
+      "rule": "Include type hints for all function signatures and variable declarations as per PEP 484.",
+      "scope": "Python coding standards",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          10,
+          11
+        ],
+        "section_anchor": "## 2. Python Coding Standards (PEP 8 & Beyond)"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-003",
+      "rule": "Use Google-style docstrings for modules, classes, and functions.",
+      "scope": "Python coding standards",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          11,
+          12
+        ],
+        "section_anchor": "## 2. Python Coding Standards (PEP 8 & Beyond)"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-004",
+      "rule": "Organize imports into standard library, third-party libraries, and local application imports, sorted alphabetically.",
+      "scope": "Python coding standards",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          12,
+          13
+        ],
+        "section_anchor": "## 2. Python Coding Standards (PEP 8 & Beyond)"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-005",
+      "rule": "Use `snake_case` for variables and functions, `PascalCase` for classes, and `UPPER_SNAKE_CASE` for constants.",
+      "scope": "Python coding standards",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          13,
+          14
+        ],
+        "section_anchor": "## 2. Python Coding Standards (PEP 8 & Beyond)"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-006",
+      "rule": "Keep business logic (services), API routing (routers), and data schemas (schemas) separate.",
+      "scope": "Architectural guidelines",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          18,
+          19
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-007",
+      "rule": "Handle all database operations in the `services` layer, avoiding direct database access from routers.",
+      "scope": "Architectural guidelines",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          19,
+          20
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-008",
+      "rule": "Avoid hardcoding credentials or configuration values. Use environment variables or a dedicated configuration file.",
+      "scope": "Architectural guidelines",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          20,
+          21
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-009",
+      "rule": "Follow RESTful principles for API endpoint design, using clear and consistent route naming.",
+      "scope": "Architectural guidelines",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          21,
+          22
+        ],
+        "section_anchor": "## 3. Architectural Guidelines"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-010",
+      "rule": "Follow the Conventional Commits specification for commit messages.",
+      "scope": "Commit and logging rules",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          25,
+          26
+        ],
+        "section_anchor": "## 4. Commit and Logging Rules"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    },
+    {
+      "id": "rule-011",
+      "rule": "Log the plan before starting a task and update the log with the outcome and next steps after completion.",
+      "scope": "Commit and logging rules",
+      "source": {
+        "file_path": "agent-rules.md",
+        "line_range": [
+          26,
+          27
+        ],
+        "section_anchor": "## 4. Commit and Logging Rules"
+      },
+      "updated_at": "2024-05-10T00:00:00Z"
+    }
+  ],
+  "warnings": [
+    {
+      "id": "warn-001",
+      "area": "security",
+      "message": "No authentication or authorization layer implemented. All endpoints are public, posing a major security risk.",
+      "severity": "high",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          16,
+          20
+        ],
+        "section_anchor": "## Technical Constraints"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "warn-002",
+      "area": "scalability",
+      "message": "The application runs as a single server process, which will not scale for high traffic loads without proper load balancing.",
+      "severity": "medium",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          21,
+          25
+        ],
+        "section_anchor": "## Technical Constraints"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    },
+    {
+      "id": "warn-003",
+      "area": "frontend",
+      "message": "The Gradio UI uses polling for updates, which should be replaced with WebSockets or SSE for real-time updates.",
+      "severity": "low",
+      "source": {
+        "file_path": "system-insights.md",
+        "line_range": [
+          65,
+          70
+        ],
+        "section_anchor": "## API Challenges & Solutions"
+      },
+      "updated_at": "2024-08-20T00:00:00Z"
+    }
+  ]
+}
