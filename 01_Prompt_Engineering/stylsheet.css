@@ -1,0 +1,27 @@
+/* Add your custom CSS here */
+body {
+    font-family: sans-serif;
+}
+
+.gradio-container {
+    background-color: #f0f0f0;
+}
+
+#chatbot {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+
+.assistant-message {
+    background-color: #f1f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
